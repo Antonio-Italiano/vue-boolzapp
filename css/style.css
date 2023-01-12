@@ -1,0 +1,10 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(#009688 15%, #D9DBD6 10%);
+}
+
+.row {
+    height: 95vh;
+    width: 80vw;
+    background-color: white;
+}

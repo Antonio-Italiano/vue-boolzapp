@@ -1,6 +1,6 @@
 console.log('Vue ok', Vue);
 
-const app = Vue.createdApp({
+const app = Vue.createApp ({
     data() {
         return {
 
