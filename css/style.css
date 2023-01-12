@@ -4,12 +4,23 @@ body {
 }
 
 /*------- GENERICS -------*/
-/* GENERIC ICON */
+i,
+li {
+    cursor: pointer;
+}
+
+/* ICON GENERIC */
 .icon {
     height: 50px;
     border-radius: 50%;
 }
 
+/* HEADER GENERIC */
+.header,
+.footer {
+    height: 10%;
+    background-color: #EAEAEA;
+}
 
 /* STRUCTURE INITIAL */
 .row {
@@ -17,16 +28,11 @@ body {
     width: 80vw;
     background-color: white;
 }
-
+main,
 #nav-bar {
     height: 100%;
 }
 
-/* HEADER NAV */
-.header-nav {
-    height: 10%;
-    background-color: #EAEAEA;
-}
 
 
 /* OPTIONS NAV NOTIFICATION */
@@ -56,7 +62,30 @@ li.select {
     background-color: #EAEAEA;
 }
 
-
-.prova{
-    border: 1px dashed black;
+/* CONTENT MAIN */
+.content-main {
+    height: 80%;
+    background-image: url(../img/mine.jpg);
+    /* overflow-y: auto; */
 }
+
+/* MESSAGE  */
+.message-contact {
+    background-color: #fff;
+    width: 45%;
+}
+
+.message-io {
+    background-color: #D5F9BA;
+    width: 100%;
+    margin-left: 55%;
+}
+.message .date p {
+    font-size: 10px;
+}
+
+
+
+/* .prova{
+    border: 1px dashed black;
+} */
