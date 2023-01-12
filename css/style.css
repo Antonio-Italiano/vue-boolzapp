@@ -1,10 +1,62 @@
-body{
+body {
     height: 100vh;
     background-image: linear-gradient(#009688 15%, #D9DBD6 10%);
 }
 
+/*------- GENERICS -------*/
+/* GENERIC ICON */
+.icon {
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+/* STRUCTURE INITIAL */
 .row {
     height: 95vh;
     width: 80vw;
     background-color: white;
+}
+
+#nav-bar {
+    height: 100%;
+}
+
+/* HEADER NAV */
+.header-nav {
+    height: 10%;
+    background-color: #EAEAEA;
+}
+
+
+/* OPTIONS NAV NOTIFICATION */
+.options-notifications {
+    height: calc(10% + 10px);
+    background-color: #8EDAFC;
+}
+
+.options-notifications i {
+    padding: 8px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    text-align: center;
+    color: #8EDAFC;
+}
+
+
+/* CONTACT LIST */
+#contact {
+    height: calc(75% - 20px);
+    overflow-y: auto;
+}
+
+li.select {
+    background-color: #EAEAEA;
+}
+
+
+.prova{
+    border: 1px dashed black;
 }
