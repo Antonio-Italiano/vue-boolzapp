@@ -74,10 +74,10 @@
                 <!-- HEADER MAIN -->
                 <div class="header d-flex align-items-center justify-content-between px-2 prova">
                     <div class="d-flex align-items-center" >
-                        <img class="icon me-3" :src="buildAvatarUrl(currentContact.avatar)" alt="">
+                        <img class="icon me-3" :src="buildAvatarUrl(currentContact[currentIndex].avatar)" alt="">
                         <div>
-                            <h6 class="mb-0"> {{ currentContact.name }} </h6>
-                            <p class="mb-0 text-secondary">Ultimo accesso oggi alle</p>
+                            <h6 class="mb-0"> {{ currentContact[currentIndex].name }} </h6>
+                            <p class="mb-0 text-secondary">Ultimo accesso {{getCurrentData()}} </p>
                         </div>
                     </div>
                     <div class="d-flex align-items-cente">
