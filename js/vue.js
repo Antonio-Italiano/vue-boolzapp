@@ -7,18 +7,25 @@ const app = Vue.createApp ({
             newMess: {
                 date: '10/01/2020 15:30:55',
                 text: '',
-                status: 'sent'
+                status: 'sent',
+                
               },
             currentIndex: 0,
-            data,                        
+            data,   
+            searchContact: '',                     
         }
     },
     computed: {
         currentContact() {
-            return this.data.contacts[this.currentIndex];
+            return this.filterContact;
         },
         currentChat() {
-            return this.currentContact.messages;
+            return this.currentContact[this.currentIndex].messages;
+        },
+        filterContact() {
+            const filterName = this.searchContact.toLowerCase();
+            return this.data.contacts.filter(name => name.name.toLowerCase().includes
+            (filterName))
         }
         
     },
@@ -33,22 +40,22 @@ const app = Vue.createApp ({
         },
 
         addMessages(){
-                const mess = {...this.newMess};
-                this.currentChat.push(mess);
+                this.createdMessages(this.newMess.text, 'sent');
                 
                 this.currentContact.visible = setTimeout(() => {  
-                    const mess = { 
-                    date: '10/01/2020 15:30:55',
-                    text: 'Si capo',
-                    status: 'received' };
-                    this.currentChat.push(mess);
+                this.createdMessages('ok', 'received');
                 }, 2000);
             
             this.clearInput();
         },
 
-        addMessagesRecived(){
-            
+        createdMessages(text, status){
+            const mess = { 
+                date: this.getCurrentData(),
+                text,
+                status, };
+                this.currentChat.push(mess);
+
         },
 
         clearInput(){
